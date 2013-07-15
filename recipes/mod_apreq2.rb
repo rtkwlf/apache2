@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-include_recipe "apache2"
+include_recipe "apache2" # ~FC007
 
 case node['platform_family']
 when "debian"

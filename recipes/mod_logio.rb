@@ -20,5 +20,5 @@
 if platform_family?("rhel", "fedora", "suse", "arch", "freebsd")
   apache_module "logio"
 else
-  include_recipe "apache2"
+  include_recipe "apache2" # ~FC007
 end

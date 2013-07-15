@@ -32,7 +32,7 @@ make_cmd = value_for_platform_family(
 case node['platform_family']
 when "arch"
 
-  include_recipe "pacman"
+  include_recipe "pacman" # ~FC007
   package "tidyhtml"
   pacman_aur openid_dev_pkgs.first do
     action [:build, :install]

@@ -94,7 +94,7 @@ if platform_family?("rhel", "fedora", "arch", "suse", "freebsd")
   end
 
   # enable mod_deflate for consistency across distributions
-  include_recipe "apache2::mod_deflate"
+  include_recipe "apache2::mod_deflate" # ~FC007
 end
 
 if platform_family?("freebsd")
@@ -211,7 +211,7 @@ end
 
 node['apache']['default_modules'].each do |mod|
   module_recipe_name = mod =~ /^mod_/ ? mod : "mod_#{mod}"
-  include_recipe "apache2::#{module_recipe_name}"
+  include_recipe "apache2::#{module_recipe_name}" # ~FC007
 end
 
 apache_site "default" do

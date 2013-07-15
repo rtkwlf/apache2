@@ -22,7 +22,7 @@ apache_service = service "apache2" do
 end
 
 begin
-  include_recipe 'logrotate'
+  include_recipe 'logrotate' # ~FC007
 rescue
   Chef::Log.warn("The apache::logrotate recipe requires the logrotate cookbook. Install the cookbook with `knife cookbook site install logrotate`.")
 end
